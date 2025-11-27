@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LIME ONE</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <style>
+      body { background:#0b0d10; color:#e9eef4; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      .card { background:#12161f; border:1px solid #1f2633; border-radius:14px; padding:16px; }
+      input, select, button { padding:10px; border-radius:10px; border:1px solid #293244; background:#0f131a; color:#dfe7f3; }
+      button { background:#ff751f; border-color:#ff751f; cursor:pointer; color: inherit; }
+      button:hover { filter:brightness(1.05); }
+      .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+      .muted { opacity:.7; font-size:12px; }
+      .pill { background:#1b2230; padding:6px 10px; border-radius:999px; font-size:12px; }
+      .grid { display:grid; grid-template-columns: 1fr; gap:10px; }
+      @media (min-width: 1000px) { .grid { grid-template-columns: 2fr 1fr; } }
+      table { width:100%; border-collapse:collapse; }
+      th, td { padding:8px; text-align:left; border-bottom:1px solid #1f2633; font-size:13px; }
+
+      /* Light theme overrides */
+      body[data-theme="light"] { background:#f6f7fb; color:#0b0f25; }
+      body[data-theme="light"] .card { background:#ffffff; border:1px solid #e5e7eb; color:#0b0f25; }
+      body[data-theme="light"] input, body[data-theme="light"] select { background:#ffffff; border:1px solid #d1d5db; color:#0f172a; }
+      body[data-theme="light"] button { background:#ff751f; border-color:#ff751f; color:#0b0f25; }
+      body[data-theme="light"] .pill { background:#f3f4f6; color:#0f172a; }
+      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="src/App.js"></script>
+  </body>
+</html>
