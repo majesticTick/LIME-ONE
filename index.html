@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LIME ONE</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <style>
+      body { background:#0b0d10; color:#e9eef4; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      .card { background:#000000; border:1px solid #2f3746; border-radius:14px; padding:16px; }
+      input, select, button { padding:10px; border-radius:10px; border:1px solid #293244; background:#0f131a; color:#dfe7f3; }
+      button { background:#ff751f; border-color:#ff751f; cursor:pointer; color: inherit; }
+      button:hover { filter:brightness(1.05); }
+      .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+      .muted { opacity:.7; font-size:12px; }
+      .pill { background:#1b2230; padding:6px 10px; border-radius:999px; font-size:12px; }
+      .grid { display:grid; grid-template-columns: 1fr; gap:10px; }
+      @media (min-width: 1000px) { .grid { grid-template-columns: 2fr 1fr; } }
+      table { width:100%; border-collapse:collapse; }
+      th, td { padding:8px; text-align:left; border-bottom:1px solid #1f2633; font-size:13px; }
+
+      /* Light theme overrides */
+      body[data-theme="light"] { background:#f6f7fb; color:#0b0f25; }
+      body[data-theme="light"] .card { background:#ffffff; border:1px solid #d1d5db; color:#0b0f25; }
+      body[data-theme="light"] input, body[data-theme="light"] select { background:#ffffff; border:1px solid #d1d5db; color:#0f172a; }
+      body[data-theme="light"] button { background:#ff751f; border-color:#ff751f; color:#0b0f25; }
+      body[data-theme="light"] .pill { background:#f3f4f6; color:#0f172a; }
+      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes toast-pop { 
+        from { transform: translateY(-14px) scale(0.96); opacity: 0; }
+        60% { transform: translateY(4px) scale(1.02); opacity: 1; }
+        to { transform: translateY(0) scale(1); opacity: 1; }
+      }
+      @keyframes toast-hide { 
+        from { transform: translateY(0); opacity: 1; filter: blur(0); }
+        to { transform: translateY(-8px); opacity: 0; filter: blur(1px); }
+      }
+      @keyframes chat-slide-in {
+        from { transform: translateX(-12px); opacity: 0; }
+        60% { transform: translateX(4px); opacity: 1; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes chat-slide-out {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(-12px); opacity: 0; }
+      }
+      @keyframes chat-fade-in {
+        from { opacity: 0; transform: translateX(-6px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @media (max-width: 640px) {
+        body { padding: 0 8px; }
+        .card { padding:12px; border-radius:12px; }
+        input, select, button { padding:9px; font-size:14px; }
+        table { font-size:12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="src/App.js"></script>
+  </body>
+</html>

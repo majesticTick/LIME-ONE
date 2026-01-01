@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="tron-grad" x1="15%" x2="85%" y1="10%" y2="90%">
+      <stop offset="0%" stop-color="#ff4d4f"/>
+      <stop offset="100%" stop-color="#d6001c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#tron-grad)"/>
+  <path fill="#fff" d="M12 13.5 29.9 53l22.6-33.9L12 13.5Zm6.2 3.8 19.8 3.6-10.8 3.7-9-7.3Zm18.8 6.1-7.4 13.7-4-9.8 11.4-3.9Zm-6.7 14.9 10.9-10.8-4.6 7.4-6.3 3.4Z"/>
+</svg>
